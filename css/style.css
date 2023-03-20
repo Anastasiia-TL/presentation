@@ -1,0 +1,112 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 0;               /* ширина всей полосы прокрутки */
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0.1,0.1,0.1,0.9);
+    background-color: orange;
+    transition: all 0.9s;
+}
+
+.menu-item:hover {
+    color: rgb(255, 255, 100);
+    background-color: #bb7700;
+}
+  
+nav {
+    position: fixed;
+    padding: 20px;
+    background-color: rgb(12, 77, 77);
+    width: 100%;
+    z-index: 2;
+}
+
+.slide {
+    height: 100vh;
+    background-color: white;
+    background-size: contain, auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.product-name {
+    position: fixed;
+    right: 50px;
+    top: 100px;
+    opacity: 0.5;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.product-name:hover {
+    opacity: 0.8;
+    outline: solid 1px white;
+}
+
+.button-gray {
+    background-color: #292929;
+    color: yellow;
+    box-shadow: none;
+}
+
+.information-block {
+    color: orange;
+    padding-right: 20px;
+    border: solid 1px orange;
+    position: absolute;
+}
+
+.info-left {
+    border-radius: 0 10px 10px 10px;
+    left: 50px;
+    top: 100px;
+}
+
+.info-right {
+    border-radius: 10px 0 10px 10px;
+    right: 50px;
+    bottom: 130px;
+}
+
+.go-up {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/up.jpeg');
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1;
+}
+
+/* Для тега a внутри элемента с классом go-up */
+.go-up a {
+    display: block;
+    height: 100%;
+}
+
+.button-left-bottom{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
