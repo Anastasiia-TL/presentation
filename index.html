@@ -6,13 +6,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     </head>
     <body>
-        <nav>
-            <a class="menu-item" href="#1">Объектив</a>
-            <a class="menu-item" href="#2">Основные характеристики</a>
-            <a class="menu-item" href="#3">Оптика</a>
-            <a class="menu-item" href="#4">Вмд сзади</a>
-            <a class="menu-item" href="#5">Вид спереди</a>
-        </nav>
+        <div class="open" onclick="show()">
+            &#9776;
+        </div>
+
+        <div class="underlay"></div>
+        <div class="menu">
+            <div class="close" onclick="hide()">
+                &#10006;
+            </div>
+            <nav>
+                <a class="menu-item" href="#1">Объектив</a>
+                <a class="menu-item" href="#2">Основные характеристики</a>
+                <a class="menu-item" href="#3">Оптика</a>
+                <a class="menu-item" href="#4">Вид сзади</a>
+                <a class="menu-item" href="#5">Вид спереди</a>
+            </nav>
+        </div>
         <div class="go-up">
             <a href="#top">
 
@@ -111,5 +121,22 @@
                 </a>
             </div>
         </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+        <script>
+            //Создаём действие, КОТОРОЕ ПОКАЗЫВАЕТ ОКНО
+            function show() {
+                //пишу код, который заставит окошко появиться
+                $('.menu').css('right','0');
+                $('.underlay').css('display','block');
+            }
+
+            function hide() {
+                //пишу код, который заставит окошко появиться
+                $('.menu').css('right','-300px');
+                $('.underlay').css('display','none');
+            }
+        </script>
     </body>
 </html>
