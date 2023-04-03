@@ -47,7 +47,7 @@ nav {
 }
 
 .product-name {
-    position: fixed;
+    position: absolute;
     right: 50px;
     top: 100px;
     opacity: 0.5;
@@ -130,6 +130,7 @@ nav {
     z-index: 3;
 }
 
+/* Media-запросы */
 @media (max-width: 800px) {
     .menu-item {
         display: block;
@@ -137,6 +138,10 @@ nav {
         margin: 2px;
         width: 85%;
         }
+
+    nav {
+        width: 40%;
+    }
 
     h1 {
         font-size: 25px;
@@ -148,6 +153,10 @@ nav {
 }
 
 @media (max-width: 600px) {
+    .slide {
+        margin-top: 0px;
+    }
+
     /* mobile menu */
     .menu {
         position: fixed;
@@ -161,6 +170,12 @@ nav {
     }
 
     .open {
+        position: fixed;
+        top: 2px;
+        left: 5px;
+        padding: 1px;
+        z-index: 1;
+        background-color: white;
         display: inline-block;
         cursor: pointer;
         color: #292929;
@@ -178,11 +193,11 @@ nav {
         cursor: pointer;
     }
 
+    /* other */
     nav {
         padding: 10px;
     }
 
-    /* other */
     h1 {
         font-size: 20px;
     }
